@@ -15,3 +15,4 @@ def send_notification_on_signup(sender, instance, created, **kwargs):
             'type': 'user_joined',
             'username': instance.username,
         }
+        async_to_sync(channel_layer.group_send)(group_name, event)

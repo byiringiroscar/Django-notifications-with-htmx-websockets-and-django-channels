@@ -45,14 +45,15 @@
             }
         });
 
-        // let clearBtn = document.getElementById('clear-btn');
+        let clearBtn = document.getElementById('clear-btn');
 
-        // clearBtn.addEventListener('click', (e) => {
-        //     let dropdown = document.getElementById('notification-dropdown');
-        //     let notifications = dropdown.querySelectorAll('div')
-        //     notifications.forEach(notification => notification.remove())
-        //     numberSpan.innerHTML = ''
-        // });
+        clearBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            let dropdown = document.getElementById('notification-dropdown');
+            let notifications = dropdown.querySelectorAll('div')
+            notifications.forEach(notification => notification.remove())
+            numberSpan.innerHTML = ''
+        });
     </script>
 </body>
 </html>
